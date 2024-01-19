@@ -8,7 +8,6 @@ import java.util.Objects;
 
 import static com.ari.BestUtil.quitDriver;
 import static com.ari.BestUtil.startDriver;
-import static java.sql.DriverManager.getDriver;
 
 public class Hook {
 
@@ -16,7 +15,7 @@ public class Hook {
 
     @Before
     public void beforeTest(Scenario scenario) {
-        System.out.println("Before Test");
+       // System.out.println("Before Test");
 
         String[] tags = scenario.getSourceTagNames().toArray(new String[0]);
         tagsRunning = tags[0];

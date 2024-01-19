@@ -19,6 +19,7 @@ public class BestUtil {
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
     }
 
     public static void quitDriver() throws InterruptedException {

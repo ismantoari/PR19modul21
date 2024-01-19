@@ -1,6 +1,7 @@
 Feature: Login
 
   @web
+    @valid-login
   Scenario: Login using valid email and password
     Given user is on login page
     And user input username with "standard_user"
