@@ -3,7 +3,11 @@ package com.ari.stepdef;
 import com.ari.page.LoginPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Test;
+
+
 
 public class LoginStepDef {
     LoginPage loginPage = new LoginPage();
@@ -29,4 +33,16 @@ public class LoginStepDef {
     }
 
 
+    @Then("user see error code {string}")
+    public void userSeeErrorCode(String errorSadFace) {
+        loginPage.userSeeErrorCode(errorSadFace);
+
+    }
+
+
+
+    @Then("assert login {string}")
+    public void assertLogin(String caseLogin) {
+        loginPage.assertLogin(caseLogin);
+    }
 }

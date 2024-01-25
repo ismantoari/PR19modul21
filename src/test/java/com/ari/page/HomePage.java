@@ -18,6 +18,8 @@ public class HomePage extends BestUtil {
     By productNameBackpackCss = By.cssSelector("#item_4_title_link > div:nth-child(1)");
     By productNameSauceLabsBoltTShirt = By.xpath("//*[@id=\"item_1_title_link\"]/div");
 
+    By shoppingCartIcon = By.xpath("//*[@id=\"shopping_cart_container\"]/a");
+
     public void validateUserIsOnHomePage(){
         WebElement productElementBackpack = driver.findElement(productNameBackpackCss);
         assertTrue(productElementBackpack.isDisplayed());
@@ -37,20 +39,24 @@ public class HomePage extends BestUtil {
 // ==============================================================================
         }
         else {
-            System.out.println("product tidak ada yang di klik");
+            System.out.println("no product add to cart");
         }
     }
 
-    public void validationCartBadge(){
-        WebElement cart = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a"));
+    public void validateCartBadgeIs(String total){
+
         WebElement cartBadge = driver.findElement(By.xpath("//*[@id=\"shopping_cart_container\"]/a/span"));
 
 // get text untuk membandingkan angka notifikasi
         assertTrue(cartBadge.isDisplayed());
-            String cartBadgeNotif = cartBadge.getText();
-            assertTrue(cartBadgeNotif.contentEquals("1"));
+        String cartBadgeNotif = cartBadge.getText();
+        assertTrue(cartBadgeNotif.contentEquals(total));
         System.out.println("jumlah angka di badge ; " + cartBadgeNotif );
     }
 
+public void clickShoppingCartIconOnHomePage(){
+        driver.findElement(shoppingCartIcon).click();
+
+}
 
 }

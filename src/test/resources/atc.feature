@@ -8,6 +8,6 @@ Feature: add to cart
     And user input username with "standard_user"
     And user input password with "secret_sauce"
     And user click login button
-    #user is on homepage
+    #user do atc
     When user click add to cart "Sauce Labs Bolt T-Shirt"
-    Then  validation cart badge notification
+    Then  validate cart badge notification is "1"
