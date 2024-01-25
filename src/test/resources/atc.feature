@@ -10,4 +10,4 @@ Feature: add to cart
     And user click login button
     #user do atc
     When user click add to cart "Sauce Labs Bolt T-Shirt"
-    Then  validate cart badge notification is "1"
+    Then validate cart badge notification is "1"

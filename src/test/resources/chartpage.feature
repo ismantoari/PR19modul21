@@ -1,8 +1,9 @@
 @web
 
-  Feature :
+  Feature: cart page
+
   @chartPage
-  Scenario: user do add to cart of Sauce Labs Bolt T-Shirt
+  Scenario: user check shopping cart to confirm product Sauce Labs Bolt T-Shirt that already added to cart
     # Precondition: user already login and atc
   Given user is on login page
   And user input username with "standard_user"

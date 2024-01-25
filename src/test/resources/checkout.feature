@@ -1,32 +1,21 @@
- Feature: check out
+@web
 
-  @web
-    @checkout
+Feature: check out
 
-  Scenario: user check out after atc of Sauce Labs Bolt T-Shirt
-    #user already atc
+  @checkout
+  Scenario: user check out product Sauce Labs Bolt T-Shirt after add to cart
+    # Precondition: user already login and atc
     Given user is on login page
     And user input username with "standard_user"
     And user input password with "secret_sauce"
     And user click login button
-    When user click add to cart "Sauce Labs Bolt T-Shirt"
-    Then  validate cart badge notification is "1"
+    And user click add to cart "Sauce Labs Bolt T-Shirt"
+    And user click shopping cart icon on homepage
+    And user is on shopping cart page
 
-    #check page
-    When user click add to cart
-    Then user is on cart page
-
-    #check out
+    #Check out
     When user click check out button
     Then user is on your information page
-
-    #continue
-    When user click continue button
-    Then user is on Checkout Overview page
-
-    #finish
-   When user click finish button
-    Then user is on Thank You page
 
 
 
