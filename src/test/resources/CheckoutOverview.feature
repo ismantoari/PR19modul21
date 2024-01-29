@@ -1,7 +1,7 @@
 @web
 Feature: check out
-  @informationPage
-  Scenario: user check out product Sauce Labs Bolt T-Shirt after add to cart
+  @checkoutOverviewFinish
+  Scenario: user check out product Sauce Labs Bolt T-Shirt finish
     # Precondition: user already login and atc
     Given user is on login page
     And user input username with "standard_user"
@@ -12,9 +12,11 @@ Feature: check out
     And user is on shopping cart page
     And user click check out button
     And user is on your information page
-
-    When user input first name "Ari"
+    And user input first name "Ari"
     And user input last name "Abdul Rahman"
     And user input zip or postal code "57221"
     And user click continue button
-    Then user is on Checkout Overview page
+    And user is on Checkout Overview page
+
+    When user click finish button
+    Then user is on thank you page

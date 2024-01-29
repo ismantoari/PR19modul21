@@ -1,7 +1,5 @@
 @web
-
 Feature: check out
-
   @checkout
   Scenario: user check out product Sauce Labs Bolt T-Shirt after add to cart
     # Precondition: user already login and atc
@@ -12,7 +10,6 @@ Feature: check out
     And user click add to cart "Sauce Labs Bolt T-Shirt"
     And user click shopping cart icon on homepage
     And user is on shopping cart page
-
     #Check out
     When user click check out button
     Then user is on your information page

@@ -10,8 +10,6 @@
   And user input password with "secret_sauce"
   And user click login button
   And user click add to cart "Sauce Labs Bolt T-Shirt"
-  # Then validate cart badge notification is "1"
-
   # test chart page
   When user click shopping cart icon on homepage
   Then user is on shopping cart page

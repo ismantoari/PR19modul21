@@ -15,7 +15,6 @@ public class Hook {
 
     @Before
     public void beforeTest(Scenario scenario) {
-       // System.out.println("Before Test");
 
         String[] tags = scenario.getSourceTagNames().toArray(new String[0]);
         tagsRunning = tags[0];
